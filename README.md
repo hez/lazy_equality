@@ -4,18 +4,16 @@
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `lazy_equality` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `lazy_equality` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:lazy_equality, "~> 0.1.0"}
+    {:lazy_equality, only: [:test], github: "hez/lazy_equality"}
   ]
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/lazy_equality](https://hexdocs.pm/lazy_equality).
+## Using
 
+See [tests](test/lazy_equality_test.exs).

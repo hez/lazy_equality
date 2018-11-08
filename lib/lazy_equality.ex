@@ -6,9 +6,7 @@ defmodule LazyEquality do
  def check_map(checking, expected) when is_map(checking) and is_map(expected) do
     expected
     |> Map.keys()
-    |> Enum.all?(fn key ->
-      check_value(Map.get(checking, key), Map.get(expected, key))
-    end)
+    |> Enum.all?(&check_value(Map.get(checking, &1), Map.get(expected, &1)))
   end
 
   def check_map(_, _), do: false
